@@ -9,9 +9,9 @@ test('New User must set the user name and age', () => {
     expect(user.age).toBe(age);
 });
 
-test('With age more than 18 years old must be an adult', () => {
-    const age = 18;
+test('With age less than 18 years old mus not be an adult', () => {
+    const age = 17;
     const user = new User('Test', age);
 
-    expect(user.isAnAdult()).toBe(true);
+    expect(user.isAnAdult()).toBe(false);
 });
